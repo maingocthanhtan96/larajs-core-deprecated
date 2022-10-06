@@ -1,3 +1,2 @@
-import MyUtil from './MyUtil';
-
-export { MyUtil };
+export * from './common';
+export * from './scroll-to';

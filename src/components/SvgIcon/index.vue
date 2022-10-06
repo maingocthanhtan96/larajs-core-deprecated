@@ -1,6 +1,6 @@
 <script lang="ts">
 import { computed } from 'vue';
-import { MyUtil } from '@larajs/core';
+import { isExternal } from '@larajs/core';
 
 export default {
   name: 'SvgIcon',
@@ -39,7 +39,7 @@ export default {
       };
     });
     const svgClass = computed(() => `${props.class} svg-icon`);
-    const hasExternal = computed(() => MyUtil.isExternal(props.name));
+    const hasExternal = computed(() => isExternal(props.name));
     const svgStyle = computed(() => {
       const { color, size } = props;
       const style: any = {};

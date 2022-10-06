@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { MyUtil } from '@larajs/core';
+import { scrollTo } from '@larajs/core';
 interface Props {
   total: number;
   page?: number;
@@ -55,13 +55,13 @@ const pageSize = computed({
 const handleSizeChange = (val: number) => {
   emit('pagination', { page: currentPage.value, limit: val });
   if (props.autoScroll) {
-    MyUtil.scrollTo(props.scrollTo, 800);
+    scrollTo(props.scrollTo, 800);
   }
 };
 const handleCurrentChange = (val: number) => {
   emit('pagination', { page: val, limit: pageSize.value });
   if (props.autoScroll) {
-    MyUtil.scrollTo(props.scrollTo, 800);
+    scrollTo(props.scrollTo, 800);
   }
 };
 </script>

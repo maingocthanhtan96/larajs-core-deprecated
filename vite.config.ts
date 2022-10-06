@@ -2,21 +2,35 @@ const path = require('path');
 const { defineConfig } = require('vite');
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+// import AutoImport from 'unplugin-auto-import/vite';
+// import Components from 'unplugin-vue-components/vite';
+// import ElementPlus from 'unplugin-element-plus/vite';
+// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 module.exports = defineConfig({
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "@larajs/core/assets/element-plus.scss" as *;`,
-      },
-    },
-  },
   resolve: {
     alias: {
       '@larajs/core': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [vue(), vueJsx()], // to process SFC
+  plugins: [
+    vue(),
+    vueJsx(),
+    // AutoImport({
+    //   resolvers: [ElementPlusResolver()],
+    // }),
+    // Components({
+    //   resolvers: [
+    //     ElementPlusResolver({
+    //       importStyle: 'sass',
+    //     }),
+    //   ],
+    //   include: [/\.vue$/, /\.vue\?vue/, /\.jsx$/],
+    // }),
+    // ElementPlus({
+    //   useSource: true,
+    // }),
+  ], // to process SFC
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
