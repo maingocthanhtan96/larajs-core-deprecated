@@ -1,10 +1,10 @@
-const path = require('path')
+import path from 'path';
 
 module.exports = {
-  title: 'My Lib',
+  title: '@larajs/core',
   description: 'Just playing around.',
   themeConfig: {
-    repo: 'https://github.com/wuruoyun/vue-component-lib-starter',
+    repo: 'https://github.com/maingocthanhtan96/larajs-core',
     sidebar: [
       {
         text: 'Introduction',
@@ -12,21 +12,22 @@ module.exports = {
           { text: 'What is My Lib?', link: '/' },
           { text: 'Getting Started', link: '/guide/' },
         ],
-      }, {
+      },
+      {
         text: 'Components',
         children: [
-          { text: 'Component A', link: '/components/component-a' },
-          { text: 'Component B', link: '/components/component-b' },
+          { text: 'SvgIcon', link: '/components/svg-icon' },
+          { text: 'Pagination', link: '/components/pagination' },
         ],
-      }
+      },
     ],
   },
   vite: {
     resolve: {
       alias: {
-        'my-lib': path.resolve(__dirname, '../../src'),
+        '@larajs/core': path.resolve(__dirname, '../../src'),
       },
-      dedupe: ['vue', /primevue\/.+/], // avoid error when using dependencies that also use Vue
-    }
-  }
-}
+      dedupe: ['vue'], // avoid error when using dependencies that also use Vue
+    },
+  },
+};

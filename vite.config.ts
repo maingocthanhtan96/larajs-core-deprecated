@@ -1,19 +1,32 @@
 const path = require('path');
 const { defineConfig } = require('vite');
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 module.exports = defineConfig({
-  plugins: [vue()], // to process SFC
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@larajs/core/assets/element-plus.scss" as *;`,
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@larajs/core': path.resolve(__dirname, './src'),
+    },
+  },
+  plugins: [vue(), vueJsx()], // to process SFC
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'my-lib',
+      name: '@larajs/core',
       formats: ['es'], // adding 'umd' requires globals set to every external module
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format: any) => `@larajs/core.${format}.js`,
     },
     rollupOptions: {
       // external modules won't be bundled into your library
-      external: ['vue', /primevue\/.+/], // not every external has a global
+      external: ['vue'], // not every external has a global
       output: {
         // disable warning on src/index.ts using both default and named export
         exports: 'named',

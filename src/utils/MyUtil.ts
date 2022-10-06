@@ -1,7 +1,12 @@
-function add(a: number, b: number): number {
-  return a + b;
+/**
+ *
+ * @param path
+ * @returns {boolean}
+ */
+function isExternal(path: string) {
+  return /^(https?:|mailto:|tel:)/.test(path);
 }
 
 export default {
-  add,
+  isExternal,
 };

@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "ecmaVersion": 8
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-strongly-recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "@vue/typescript/recommended",
+    "@vue/prettier",
+    "@vue/eslint-config-typescript"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "vue/multi-word-component-names": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-unused-vars": 0
+  }
+}

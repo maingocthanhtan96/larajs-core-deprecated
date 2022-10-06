@@ -1,20 +1,21 @@
 <script setup>
-import Basic from './demo/ComponentA/Basic.vue'
+import Pagination from './demo/Pagination/index.vue'
 </script>
 
-# Component A
+# Pagination
 
-This is a simple Hello Word component with a prop and use icon <span class="icon-heart" style="color:tomato"></span> from a font file.
+This is a simple Hello Word component with a prop and use icon <span class="icon-heart" style="color:tomato"></span>
+from a font file.
 
 ## Example Usage
 
 You may show demo below with the code snippet.
 
 <DemoContainer>
-  <Basic/>
+  <Pagination/>
 </DemoContainer>
 
-<<< @/components/demo/ComponentA/Basic.vue
+<<< @/components/demo/Pagination/index.vue
 
 ## Reference
 

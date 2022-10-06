@@ -38,10 +38,10 @@ The best way to develop and test your component is by creating demos in `docs/co
 If you want to test the library in your Vue3 app locally:
 
 - In the root folder of this library, run `npm link`. This will create a symbolic link to the library.
-- In the root folder of your client app, run `npm link my-lib`. This will add the symbolic link to the `node_modules` folder in your client app.
-- You can now import `my-lib` in your client app.
+- In the root folder of your client app, run `npm link @larajs/core`. This will add the symbolic link to the `node_modules` folder in your client app.
+- You can now import `@larajs/core` in your client app.
 
-There is no need to add `my-lib` to your client app's dependency in this case.
+There is no need to add `@larajs/core` to your client app's dependency in this case.
 
 If you made changes to the library, you will need to rebuild the library. Your Vue3 app shall hot reload when the building of library is completed.
 
@@ -75,7 +75,7 @@ The library includes example utilities and constants. They are also exported in 
 
 ```js
 <script lang="ts">
-import { MyConstants, MyUtil } from 'my-lib'
+import { MyConstants, MyUtil } from '@larajs/core'
 
 export default {
   data () {
@@ -103,7 +103,7 @@ If you have your own special set of SVG icons, you may create a font file (`.wof
 The client app shall import `style.css`, usually in the entry file:
 
 ```js
-import 'my-lib/dist/style.css'
+import '@larajs/core/dist/style.css'
 ```
 
 ### Third-party dependencies
