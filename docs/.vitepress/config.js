@@ -1,4 +1,5 @@
 import path from 'path';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 module.exports = {
   title: '@larajs/core',
@@ -9,7 +10,7 @@ module.exports = {
       {
         text: 'Introduction',
         children: [
-          { text: 'What is My Lib?', link: '/' },
+          { text: 'What is @larajs/core?', link: '/' },
           { text: 'Getting Started', link: '/guide/' },
         ],
       },
@@ -18,11 +19,14 @@ module.exports = {
         children: [
           { text: 'SvgIcon', link: '/components/svg-icon' },
           { text: 'Pagination', link: '/components/pagination' },
+          { text: 'BaseDialog', link: '/components/base-dialog' },
+          { text: 'VueHoverMask', link: '/components/vue-hover-mask' },
         ],
       },
     ],
   },
   vite: {
+    plugins: [vueJsx()],
     resolve: {
       alias: {
         '@larajs/core': path.resolve(__dirname, '../../src'),

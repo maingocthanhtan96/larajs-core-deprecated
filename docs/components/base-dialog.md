@@ -1,22 +1,21 @@
 <script setup>
-import Icon from './demo/SvgIcon/Icon.vue'
+import BaseDialog from './demo/BaseDialog/index.vue'
 </script>
 
 # SvgIcon
 
-This is global icon component.
-
-By default, the SvgIcon component is registered `@/icons` and icon imported automatically in folder
+This is a simple Hello Word component with a prop and use icon <span class="icon-heart" style="color:tomato"></span>
+from a font file.
 
 ## Example Usage
 
 You may show demo below with the code snippet.
 
 <DemoContainer>
-  <Icon/>
+  <BaseDialog/>
 </DemoContainer>
 
-<<< @/components/demo/SvgIcon/Basic.vue
+<<< @/components/demo/BaseDialog/index.vue
 
 ## Reference
 

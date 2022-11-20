@@ -1,3 +1,3 @@
-import * as MyConstants from './MyConstants';
+import * as screen from './screen';
 
-export { MyConstants };
+export { screen };
