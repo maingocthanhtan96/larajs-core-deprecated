@@ -10,7 +10,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 module.exports = defineConfig({
   resolve: {
     alias: {
-      '@larajs/core': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   plugins: [

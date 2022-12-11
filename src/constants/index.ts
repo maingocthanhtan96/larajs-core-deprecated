@@ -1,3 +1,1 @@
-import * as screen from './screen';
-
-export { screen };
+export * from './screen';

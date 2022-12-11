@@ -1,6 +1,6 @@
 <script lang="ts">
 import { computed } from 'vue';
-import { isExternal } from '@larajs/core';
+import { isExternal } from '@/utils';
 
 export default {
   name: 'SvgIcon',

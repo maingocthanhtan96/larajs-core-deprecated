@@ -12,10 +12,11 @@
     "lib": ["esnext", "dom"],
     "declaration": true,
     "emitDeclarationOnly": true,
+    "noImplicitAny": false,
     "declarationDir": "./dist/types",
     "isolatedModules": true,
     "skipLibCheck": true,
-    "types": ["vite/client", "element-plus/global"],
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

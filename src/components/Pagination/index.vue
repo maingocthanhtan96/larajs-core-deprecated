@@ -16,8 +16,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { scrollTo } from '@larajs/core';
-interface Props {
+import { scrollTo } from '@/utils';
+
+export interface Props {
   total: number;
   page?: number;
   limit?: number;

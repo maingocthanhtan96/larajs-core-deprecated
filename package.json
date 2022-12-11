@@ -1,16 +1,25 @@
 {
   "name": "@larajs/core",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "email": "maingocthanhtan96@gmail.com",
+    "name": "maingocthanhtan96"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "rimraf dist && vue-tsc && vite build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
+  "main": "dist/@larajs/core.es.js",
   "peerDependencies": {
+    "axios": "^1.2.1",
+    "element-plus": "^2.2.26",
     "vue": "^3.2.40"
   },
   "devDependencies": {
+    "@element-plus/icons": "^0.0.11",
     "@types/node": "^18.8.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
@@ -18,10 +27,13 @@
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "axios": "^1.2.1",
+    "element-plus": "^2.2.26",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.6.0",
+    "pinia": "^2.0.28",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "sass": "^1.55.0",
@@ -33,6 +45,7 @@
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "^0.22.4",
     "vue": "^3.2.40",
+    "vue-i18n": "^9.2.2",
     "vue-tsc": "^0.40.13"
   },
   "files": [
@@ -46,8 +59,5 @@
       "import": "./dist/@larajs/core.es.js"
     },
     "./dist/style.css": "./dist/style.css"
-  },
-  "dependencies": {
-    "element-plus": "^2.2.17"
   }
 }

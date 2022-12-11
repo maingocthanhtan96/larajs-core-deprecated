@@ -4,7 +4,6 @@ import ElementPlus from 'element-plus';
 
 function install(app: App) {
   for (const key in components) {
-    // @ts-expect-error
     app.component(key, components[key]);
   }
   app.use(ElementPlus, { size: 'default' });
@@ -17,3 +16,4 @@ export default { install };
 export * from './components';
 export * from './constants';
 export * from './utils';
+export * from './uses';

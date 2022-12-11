@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 import { useWindowSize } from '@vueuse/core';
-import { screen } from '@larajs/core';
+import { xs } from '@/constants';
 import { useSlots, useAttrs, computed } from 'vue';
 
 const props = defineProps({
@@ -24,7 +24,7 @@ const dialogVisibleComputed = computed({
 });
 
 const Dialog = () => (
-  <el-dialog v-model={dialogVisibleComputed.value} fullscreen={width.value <= screen.xs} {...attrs}>
+  <el-dialog v-model={dialogVisibleComputed.value} fullscreen={width.value <= xs} {...attrs}>
     {{
       header: () => slots.header?.(),
       default: () => slots.default?.(),
