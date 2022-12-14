@@ -1,16 +1,14 @@
 {
-  "name": "@larajs/core",
-  "version": "1.0.0",
-  "author": {
-    "email": "maingocthanhtan96@gmail.com",
-    "name": "maingocthanhtan96"
-  },
+  "name": "@maingocthanhtan96/core",
+  "version": "1.1.6",
+  "author": "maingocthanhtan96 <maingocthanhtan96@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && vue-tsc && vite build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "publish:lib": "yarn build && npm publish"
   },
   "main": "dist/@larajs/core.es.js",
   "peerDependencies": {
@@ -59,5 +57,12 @@
       "import": "./dist/@larajs/core.es.js"
     },
     "./dist/style.css": "./dist/style.css"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-maingocthanhtan96:maingocthanhtan96/larajs-core.git"
   }
 }
